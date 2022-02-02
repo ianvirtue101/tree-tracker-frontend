@@ -1,19 +1,18 @@
 import { useState, useRef, useEffect } from "react";
 // import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker"; // Load
 
-import mapboxgl from "mapbox-gl";
+import mapboxgl from "!mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import "./MapComp.scss";
 
-// mapboxgl.workerClass = MapboxWorker;
+
 
 const { REACT_APP_MAPBOX_TOKEN } = process.env;
 
 mapboxgl.accessToken = REACT_APP_MAPBOX_TOKEN;
 
 
-// const position = [56.130367, -106.346771];
 function MapComp() {
   const mapContainer = useRef();
 
@@ -236,7 +235,6 @@ function MapComp() {
         <div
           className="map-container__map"
           ref={mapContainer}
-          // style={{ width: "100%", height: "100vh" }}
         ></div>
       </div>
     </>
