@@ -1,17 +1,17 @@
 import { useState, useRef, useEffect } from "react";
 // import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker"; // Load
 
-import mapboxgl from "!mapbox-gl";
+import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import "./MapComp.scss";
 
-
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const { REACT_APP_MAPBOX_TOKEN } = process.env;
 
 mapboxgl.accessToken = REACT_APP_MAPBOX_TOKEN;
-
 
 function MapComp() {
   const mapContainer = useRef();
@@ -232,10 +232,7 @@ function MapComp() {
         <div className="menu" id="menu" />
       </div>
       <div className="map-container">
-        <div
-          className="map-container__map"
-          ref={mapContainer}
-        ></div>
+        <div className="map-container__map" ref={mapContainer}></div>
       </div>
     </>
   );
