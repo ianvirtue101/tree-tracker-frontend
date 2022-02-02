@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker"; // Load
 
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import "./MapComp.scss";
+
+mapboxgl.workerClass = MapboxWorker;
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaWFudmlydHVlMTAxIiwiYSI6ImNreHFnem5kOTI0ZGYyeHBlZnh5NjRvMWUifQ.VzF_OgIqBIg9BVTkZsvYjg";
