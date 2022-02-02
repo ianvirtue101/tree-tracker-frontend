@@ -9,7 +9,7 @@ import "./MapComp.scss";
 // mapboxgl.workerClass = MapboxWorker;
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoiaWFudmlydHVlMTAxIiwiYSI6ImNreXMzdXpoMTEwMGYybmpqbjZsZXV3bjAifQ.sWkIirYhRs23ox6EC6epkw";
+  "pk.eyJ1IjoiaWFudmlydHVlMTAxIiwiYSI6ImNrejY1OTZrMTB4N3Uyb3FvOGFwMmlqMzEifQ.W5GYYfwhQ6VQG2HOcXDpoQ";
 
 // const position = [56.130367, -106.346771];
 function MapComp() {
