@@ -8,8 +8,10 @@ import "./MapComp.scss";
 
 // mapboxgl.workerClass = MapboxWorker;
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiaWFudmlydHVlMTAxIiwiYSI6ImNrejY1OTZrMTB4N3Uyb3FvOGFwMmlqMzEifQ.W5GYYfwhQ6VQG2HOcXDpoQ";
+const { REACT_APP_MAPBOX_TOKEN } = process.env;
+
+mapboxgl.accessToken = REACT_APP_MAPBOX_TOKEN;
+
 
 // const position = [56.130367, -106.346771];
 function MapComp() {
