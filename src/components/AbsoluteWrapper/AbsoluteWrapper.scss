@@ -1,0 +1,7 @@
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+
+.position {
+  position: absolute;
+  width: 100%;
+}

@@ -1,0 +1,147 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+html {
+  /* this makes sure the padding and the border is included in the box sizing */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.parallax-div {
+  width: calc(100% + 20px);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  pointer-events: auto;
+}
+
+.parallax-container {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  display: flex;
+  // top: 20.5rem;
+  bottom: 0;
+  right: 0rem;
+  left: 0;
+  overflow-x: hidden;
+  height: 70vh;
+  width: 100%;
+  pointer-events: auto;
+
+  &__layer {
+    height: 20%;
+
+    &--link {
+      height: 50%;
+      z-index: 1 !important;
+    }
+  }
+
+  &__text-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__scroll-text {
+    @include font-bold;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+  }
+
+  &__counter {
+    color: #456f2d;
+  }
+
+  &__card {
+    // position: relative;
+    // right: 20rem;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.25rem;
+    height: 10rem;
+    padding: 1rem;
+    width: 25%;
+    text-align: center;
+    border-radius: 10px;
+
+    &--sticky {
+      margin-left: 15%;
+      background-color: #ff6d6d;
+    }
+
+    // &--parallax {
+    //   //  width: 10rem;
+    //   //   margin-right: 40%;
+    // }
+
+    &--purple {
+      background-color: white;
+      margin-right: 15%;
+    }
+
+    &--blue {
+      background-color: #5b65ad;
+      color: white;
+      // position: relative;
+      // width: 20rem;
+      margin-right: 15%;
+    }
+  }
+
+  &__card-text {
+    text-align: center;
+    // text-transform: uppercase;
+    width: 40%;
+    font-size: 2rem;
+    @include font-bold;
+    // background-color: white;
+    margin: -5%;
+    padding: 5rem;
+    border-radius: 0.25rem;
+    color: white;
+
+    &--link {
+      text-align: center;
+      // text-transform: uppercase;
+      // width: 40%;
+      font-size: 1rem;
+      @include font-bold;
+      margin: -5%;
+      padding: 0.5rem 2rem;
+      border-radius: 0.25rem;
+      color: white;
+      pointer-events: auto;
+      z-index: 1 !important;
+      background-color: #456f2d;
+      border-radius: 2rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #012611;
+      }
+    }
+  }
+}
+
+// @media (max-width: 750px) {
+//   .card {
+//     width: 40%;
+//   }
+
+//   .parallax {
+//     margin-right: 1.5rem;
+//   }
+
+//   .sticky {
+//     margin-left: 1.5rem;
+//   }
+// }

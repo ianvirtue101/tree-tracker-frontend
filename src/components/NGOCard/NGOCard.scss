@@ -1,0 +1,68 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.filter-list-container {
+  display: flex;
+  // flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  // background-color: white;
+
+  &__filter {
+    width: 30%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.ngo-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: auto;
+  border-radius: 1rem;
+
+  background-color: white;
+
+  &__image {
+    width: auto;
+    border-radius: 1rem 1rem 0rem 0rem;
+    padding-bottom: 0.5rem;
+    height: 15rem;
+    object-fit: cover;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
+  &__title {
+    @include font-bold;
+    padding-bottom: 0.5rem;
+    height: 2.5rem;
+  }
+
+  &__text {
+    padding-bottom: 1rem;
+    height: 17rem;
+  }
+
+  &__link {
+    @include font-bold;
+    text-align: center;
+    // width: 100%;
+    // margin-top: 0.5rem;
+    text-decoration: none;
+    color: white;
+    background-color: #456f2d;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: #012611;
+    }
+  }
+}

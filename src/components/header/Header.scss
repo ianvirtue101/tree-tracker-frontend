@@ -1,0 +1,38 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header-container {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+
+  &__logo {
+    width: 10rem;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-link {
+    @include font-bold;
+    margin-right: 3rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #456f2d;
+    padding: 0.75rem 1rem;
+    border-radius: 1.5rem;
+
+    &:hover {
+      background-color: #012611;
+    }
+    &:active {
+      background-color: #012611;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.map-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+
+  &__under-siege {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__global-tropics {
+    // margin-left: 20%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.map-content-container-section {
+  &__left {
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1rem 4rem 2rem 2rem;
+    padding: 2rem;
+    width: 30rem;
+    border-bottom: 2rem solid #456f2d;
+  }
+
+  &__right {
+    margin: 1rem 0rem;
+    background-color: white;
+    border-radius: 4rem 1rem 4rem 1rem;
+    padding: 1rem;
+    width: 30rem;
+    border-bottom: 2rem solid #456f2d;
+  }
+
+  &__graph {
+    margin: 1rem 0rem;
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 3rem;
+  }
+
+  &__map {
+    margin: 1rem 0rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  &__title {
+    @include font-bold;
+    text-transform: uppercase;
+    color: #012611;
+  }
+
+  &__text {
+    @include font-regular;
+    text-align: justify;
+  }
+}

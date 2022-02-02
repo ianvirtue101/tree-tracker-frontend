@@ -1,0 +1,10 @@
+*,
+**::before,
+**::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Titillium Web";
+  margin: 0rem;
+}

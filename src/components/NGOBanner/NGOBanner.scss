@@ -1,0 +1,33 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.ngo-hero-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0),
+      rgba(0, 0, 0, 1)
+    ),
+    url("../../assets/images/river-in-woods.jpeg");
+  height: 40rem;
+  width: 100%;
+  border-bottom: black;
+  background-position: center;
+  background-size: cover;
+
+  &__counter {
+    color: #04bfbf;
+    @include font-bold;
+  }
+
+  &__text {
+    font-size: 2rem;
+    @include font-bold;
+    padding: 1rem;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f2095435.css",
+    "main.js": "/static/js/main.11d01851.js",
+    "static/media/river-in-woods.jpeg": "/static/media/river-in-woods.7a03ac949e470adcb4aa.jpeg",
+    "static/media/borneo-jungle-deforestation.jpeg": "/static/media/borneo-jungle-deforestation.aba4cc7c5fa54ddd1e94.jpeg",
+    "static/media/misty-mountain.jpeg": "/static/media/misty-mountain.1a2f848ffab6090575c6.jpeg",
+    "static/media/rice-terrace.jpeg": "/static/media/rice-terrace.8a1ff8a0cbcfe582a74b.jpeg",
+    "static/media/footer.svg": "/static/media/footer.d60bf20c7a29d8a96430dca6d3fcb248.svg",
+    "static/media/tree-tracker-logo.svg": "/static/media/tree-tracker-logo.3691bf2802ed488555e1270a60f4ead8.svg",
+    "index.html": "/index.html",
+    "main.f2095435.css.map": "/static/css/main.f2095435.css.map",
+    "main.11d01851.js.map": "/static/js/main.11d01851.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2095435.css",
+    "static/js/main.11d01851.js"
+  ]
+}
