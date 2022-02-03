@@ -1,13 +1,17 @@
 import { useState, useRef, useEffect } from "react";
 // import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker"; // Load
 
-import mapboxgl from "mapbox-gl";
+// import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import "./MapComp.scss";
 
-mapboxgl.workerClass =
-  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+import mapboxgl from "mapbox-gl/dist/mapbox-gl";
+import MapboxWorker from "mapbox-gl/dist/mapbox-gl-csp-worker";
+mapboxgl.workerClass = MapboxWorker;
+
+// mapboxgl.workerClass =
+//   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const { REACT_APP_MAPBOX_TOKEN } = process.env;
 
