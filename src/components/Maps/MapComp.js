@@ -7,11 +7,8 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import "./MapComp.scss";
 
 import mapboxgl from "mapbox-gl/dist/mapbox-gl";
-import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker"; // Load worker code separately with worker-loader
-
-mapboxgl.workerClass = MapboxWorker; // Wire up loaded worker to be used instead of the default
-// mapboxgl.workerClass =
-//   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+import MapboxWorker from "mapbox-gl/dist/mapbox-gl-csp-worker"; // Wire up loaded worker to be used instead of the default
+mapboxgl.workerClass = MapboxWorker;
 
 const { REACT_APP_MAPBOX_TOKEN } = process.env;
 
