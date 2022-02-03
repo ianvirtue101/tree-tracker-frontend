@@ -13,7 +13,7 @@ import "./MapComp.scss";
 // // eslint-disable-next-line import/no-webpack-loader-syntax
 // mapboxgl.workerClass =
 //   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
-// const { REACT_APP_MAPBOX_TOKEN } = process.env;
+const { REACT_APP_MAPBOX_TOKEN } = process.env;
 
 mapboxgl.accessToken = REACT_APP_MAPBOX_TOKEN;
 
