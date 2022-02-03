@@ -1,15 +1,18 @@
 import { useState, useRef, useEffect } from "react";
 // import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker"; // Load
 
-// import mapboxgl from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import "./MapComp.scss";
 
-import mapboxgl from "mapbox-gl/dist/mapbox-gl";
-import MapboxWorker from "mapbox-gl/dist/mapbox-gl-csp-worker"; // Wire up loaded worker to be used instead of the default
-mapboxgl.workerClass = MapboxWorker;
+// import mapboxgl from "mapbox-gl/dist/mapbox-gl";
+// import MapboxWorker from "mapbox-gl/dist/mapbox-gl-csp-worker"; // Wire up loaded worker to be used instead of the default
+// mapboxgl.workerClass = MapboxWorker;
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 const { REACT_APP_MAPBOX_TOKEN } = process.env;
 
 mapboxgl.accessToken = REACT_APP_MAPBOX_TOKEN;
